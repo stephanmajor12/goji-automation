@@ -5,6 +5,11 @@ Documentation
 
 You will need the following things.
 
+MAKE SURE TO:
+
+point chrome_options.add_argument("load-extension=C:/work_goji/testing/build") #needs to point to the test build!!!!
+to your builds directory. 
+
 A google account
 An oscar account
 

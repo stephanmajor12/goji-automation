@@ -7,7 +7,7 @@ import time
 import pickle
 
 chrome_options = ChromeOptions()
-chrome_options.add_argument("load-extension=C:/work_goji/automation/build")
+chrome_options.add_argument("load-extension=C:/work_goji/testing/build") #needs to point to the test build!!!!
 
 #chrome_options.add_extension('build.crx')
 
