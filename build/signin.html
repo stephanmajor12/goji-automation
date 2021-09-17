@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; style-src 'self' 'unsafe-inline';"
+    /> -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link
+      rel="manifest"
+      href="<%= htmlWebpackPlugin.options.manifest %>"
+      crossorigin="use-credentials"
+    />
+
+    <style>
+      span,
+      h6 {
+        font-family: "Poppins" !important;
+      }
+
+      .aboutContent {
+        width: 240px;
+        height: 240px;
+      }
+
+      .aboutContent .header {
+        height: 55px;
+        background: #00164e;
+      }
+
+      .aboutContent .micContent {
+        border-top: 1px solid #f0f0f0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .aboutContent .footer {
+        background: #f3f3f3;
+        font-size: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .right-item {
+        margin-top: 3px;
+      }
+
+      .mic-permission-switch {
+        position: relative;
+        display: block;
+        width: 52px;
+        height: 25px;
+      }
+
+      .mic-permission-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .mic-permission-switch input:checked + .slider {
+        background-color: #2196f3;
+      }
+
+      .mic-permission-switch input:focus + .slider {
+        box-shadow: 0 0 1px #2196f3;
+      }
+
+      .mic-permission-switch input:checked + .slider::before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+
+      .mic-permission-switch .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      .mic-permission-switch .slider::before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      .mic-permission-switch .round {
+        border-radius: 34px;
+      }
+      emitLiveStream .mic-permission-switch .round::before {
+        border-radius: 50%;
+      }
+
+      .login-btn {
+        border: 1px solid #f0f0f0;
+      }
+
+      .login-btn:hover {
+        cursor: pointer;
+      }
+    </style>
+    <title>Kennedy</title>
+  <script defer src="dev.bundle.js"></script></head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="aboutContent">
+      <div class="p-3 header d-flex align-items-center justify-content-between">
+        <span class="font-12 text-white font-weight-bold">gojitech</span>
+        <svg
+          width="24"
+          height="23"
+          viewBox="0 0 24 23"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3.05078 10.3464C3.05078 9.76566 2.56809 9.29492 1.97266 9.29492C1.37722 9.29492 0.894531 9.76566 0.894531 10.3464V13.0187C0.894531 13.5994 1.37722 14.0702 1.97266 14.0702C2.56809 14.0702 3.05078 13.5994 3.05078 13.0187V10.3464Z"
+            fill="white"
+          />
+          <path
+            d="M6.87891 6.90739C6.87891 6.3267 6.39621 5.85596 5.80078 5.85596C5.20535 5.85596 4.72266 6.3267 4.72266 6.90739V16.4579C4.72266 17.0385 5.20535 17.5093 5.80078 17.5093C6.39621 17.5093 6.87891 17.0385 6.87891 16.4579V6.90739Z"
+            fill="white"
+          />
+          <path
+            d="M10.707 9.82072C10.707 9.24003 10.2243 8.76929 9.62891 8.76929C9.03347 8.76929 8.55078 9.24003 8.55078 9.82072V13.5445C8.55078 14.1252 9.03347 14.596 9.62891 14.596C10.2243 14.596 10.707 14.1252 10.707 13.5445V9.82072Z"
+            fill="white"
+          />
+          <path
+            d="M23.1055 10.3464C23.1055 9.76566 22.6228 9.29492 22.0273 9.29492C21.4319 9.29492 20.9492 9.76566 20.9492 10.3464V13.0187C20.9492 13.5994 21.4319 14.0702 22.0273 14.0702C22.6228 14.0702 23.1055 13.5994 23.1055 13.0187V10.3464Z"
+            fill="white"
+          />
+          <path
+            d="M19.2773 7.61564C19.2773 7.03495 18.7947 6.56421 18.1992 6.56421C17.6038 6.56421 17.1211 7.03495 17.1211 7.61564V15.7496C17.1211 16.3303 17.6038 16.801 18.1992 16.801C18.7947 16.801 19.2773 16.3303 19.2773 15.7496V7.61564Z"
+            fill="white"
+          />
+          <path
+            d="M14.9922 3.65446C14.9922 3.07377 14.5095 2.60303 13.9141 2.60303C13.3186 2.60303 12.8359 3.07377 12.8359 3.65446V19.7143C12.8359 20.295 13.3186 20.7657 13.9141 20.7657C14.5095 20.7657 14.9922 20.295 14.9922 19.7143V3.65446Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+      <div
+        class="
+          m-3
+          p-2
+          d-flex
+          align-items-center
+          justify-content-center
+          login-btn
+        "
+        id="signin"
+      >
+        <div style="width: 25px" class="mr-2">
+          <svg
+            version="1.1"
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            x="0px"
+            y="0px"
+            viewBox="0 0 512 512"
+            style="enable-background: new 0 0 512 512"
+            xml:space="preserve"
+          >
+            <path
+              style="fill: #fbbb00"
+              d="M113.47,309.408L95.648,375.94l-65.139,1.378C11.042,341.211,0,299.9,0,256
+              c0-42.451,10.324-82.483,28.624-117.732h0.014l57.992,10.632l25.404,57.644c-5.317,15.501-8.215,32.141-8.215,49.456
+              C103.821,274.792,107.225,292.797,113.47,309.408z"
+            />
+            <path
+              style="fill: #518ef8"
+              d="M507.527,208.176C510.467,223.662,512,239.655,512,256c0,18.328-1.927,36.206-5.598,53.451
+              c-12.462,58.683-45.025,109.925-90.134,146.187l-0.014-0.014l-73.044-3.727l-10.338-64.535
+              c29.932-17.554,53.324-45.025,65.646-77.911h-136.89V208.176h138.887L507.527,208.176L507.527,208.176z"
+            />
+            <path
+              style="fill: #28b446"
+              d="M416.253,455.624l0.014,0.014C372.396,490.901,316.666,512,256,512
+              c-97.491,0-182.252-54.491-225.491-134.681l82.961-67.91c21.619,57.698,77.278,98.771,142.53,98.771
+              c28.047,0,54.323-7.582,76.87-20.818L416.253,455.624z"
+            />
+            <path
+              style="fill: #f14336"
+              d="M419.404,58.936l-82.933,67.896c-23.335-14.586-50.919-23.012-80.471-23.012
+              c-66.729,0-123.429,42.957-143.965,102.724l-83.397-68.276h-0.014C71.23,56.123,157.06,0,256,0
+              C318.115,0,375.068,22.126,419.404,58.936z"
+            />
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+            <g></g>
+          </svg>
+        </div>
+
+        <span>Sign in with Google</span>
+      </div>
+      <h6 class="px-3 pt-3 pb-0 font-weight-bold">Settings</h6>
+      <div class="micContent p-3 d-flex justify-content-between">
+        <span class="font-12">Microphone</span>
+        <div class="right-item">
+          <label class="mic-permission-switch">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+      <div class="footer px-3 py-2">
+        <span>gojitech</span>
+        <span> <b>Bulid</b> Frontend: 0.0.76 | Backend: 1.2 </span>
+      </div>
+    </div>
+  </body>
+  <script>
+    const axios = require("axios");
+    document.addEventListener("DOMContentLoaded", function () {
+      var link = document.getElementById("signin");
+      // onClick's logic below:
+      link.addEventListener("click", function () {
+        try {
+          chrome.runtime.sendMessage(
+            //XXX was "gmail_login", we bypass for now, and use "test_login"
+            // TODO- fix google-login later
+            {
+              type: "gmail_login",
+              clientID:
+                "333223101659-ckihbcqtk9p24bprljf4b3a8jm8gufu1.apps.googleusercontent.com",
+            },
+            async function (data) {
+              if (data.result === 1 || data.data) {
+                console.log("login test.....");
+              }
+            }
+          );
+        } catch (error) {
+          console.log(`${error}`);
+        }
+      });
+    });
+  </script>
+</html>

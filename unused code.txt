@@ -1,0 +1,24 @@
+"""
+#Login info google
+userName_g = "stephan.major@gojitech.co"
+passWord_g = "TRKw52Vk"
+
+#Google signin instructions
+driver.get(website_path_2)
+
+user_g_input = driver.find_element_by_id('identifierId')
+user_g_input.send_keys(userName_g);
+
+next_g_input = driver.find_element_by_id('identifierNext')
+next_g_input.click();
+
+time.sleep(3) 
+#Makes the code stop for a couple seconds, 
+#this stops the automation from putting the password in the username box.
+
+pass_g_input = driver.find_element_by_xpath("//input[@class='whsOnd zHQkBf']")
+pass_g_input.send_keys(passWord_g)
+
+next_g2_input = driver.find_element_by_id('passwordNext')
+next_g2_input.click();
+"""
