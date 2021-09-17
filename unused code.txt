@@ -1,7 +1,7 @@
 """
 #Login info google
-userName_g = "stephan.major@gojitech.co"
-passWord_g = "TRKw52Vk"
+userName_g = ""
+passWord_g = ""
 
 #Google signin instructions
 driver.get(website_path_2)
